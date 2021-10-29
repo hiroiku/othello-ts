@@ -3,6 +3,9 @@ import { Scene } from '@/Game/Scene';
 import { GameOverScene } from '@/Scene/GameOverScene';
 import { RenderingScene } from '@/Scene/RenderingScene';
 
+/**
+ * ボードの状態によってゲームを継続するかどうかを判定するシーン
+ */
 export class BoardCheckScene extends Scene<Context> {
   public handle() {
     const board = this.context.board;

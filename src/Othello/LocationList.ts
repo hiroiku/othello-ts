@@ -1,3 +1,6 @@
+/**
+ * x, y 座標について、その座標の状態を表すクラス
+ */
 export class LocationList<T> {
   protected readonly positions = new Map<string, T>();
 

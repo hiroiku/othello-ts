@@ -1,5 +1,8 @@
 import { Player } from '@/Othello/Player';
 
+/**
+ * プレイヤーの状態とターン数を管理するクラス
+ */
 export class Othello {
   protected readonly players: Player[];
   public get currentPlayer() {

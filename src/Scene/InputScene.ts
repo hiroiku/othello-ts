@@ -3,6 +3,9 @@ import { Context } from '@/main';
 import { Scene } from '@/Game/Scene';
 import { PutScene } from '@/Scene/PutScene';
 
+/**
+ * 盤面に石を置く位置を入力するシーン
+ */
 export class InputScene extends Scene<Context> {
   /**
    * 横軸の目盛りから添字に変換する

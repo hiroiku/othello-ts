@@ -1,7 +1,10 @@
-import { Scene, SceneConstructor } from '@/Game/Scene';
+import { SceneConstructor } from '@/Game/Scene';
 
 export type GameInitializer<T> = () => T;
 
+/**
+ * ゲームのシーンを管理するクラス
+ */
 export class Game<T> {
   protected readonly context: T;
 

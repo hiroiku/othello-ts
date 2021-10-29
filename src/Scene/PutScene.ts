@@ -2,6 +2,9 @@ import { Context } from '@/main';
 import { Scene } from '@/Game/Scene';
 import { BoardCheckScene } from '@/Scene/BoardCheckScene';
 
+/**
+ * 盤面に石を置くシーン
+ */
 export class PutScene extends Scene<Context> {
   public handle() {
     const input = this.context.input;

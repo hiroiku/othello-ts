@@ -1,6 +1,6 @@
 import { LocationList } from '@/Othello/LocationList';
-import { Square } from '@/Othello/Square';
 import { Player } from '@/Othello/Player';
+import { Square } from '@/Othello/Square';
 
 export interface BoardOptions {
   xAxis: string[];
@@ -9,6 +9,10 @@ export interface BoardOptions {
   valid: string;
 }
 
+/**
+ * オセロの盤面を管理するクラス
+ * プレイヤーの状態やターンについてはこのクラスでは扱わない
+ */
 export class Board {
   public readonly xAxis: string[];
   public readonly yAxis: string[];

@@ -1,3 +1,6 @@
+/**
+ * オセロ盤面の 1 マスを表すクラス
+ */
 export class Square {
   private character: string;
 

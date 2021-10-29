@@ -2,6 +2,9 @@ import { Context } from '@/main';
 import { Scene } from '@/Game/Scene';
 import { InputScene } from '@/Scene/InputScene';
 
+/**
+ * 盤面の状態を表示するシーン
+ */
 export class RenderingScene extends Scene<Context> {
   public handle() {
     // 盤面のレンダリング
