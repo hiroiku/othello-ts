@@ -6,7 +6,6 @@ export class GameOverScene extends Scene<Context> {
   public handle() {
     const players = this.context.players;
     const board = this.context.board;
-    const othello = this.context.othello;
 
     let maxPieces = 0;
     let winner: Player | null = null;
