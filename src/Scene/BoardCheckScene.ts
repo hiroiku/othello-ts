@@ -1,10 +1,10 @@
 import { Context } from '@/main';
-import { Scene, SceneConstructor } from '@/Game/Scene';
+import { Scene } from '@/Game/Scene';
 import { GameOverScene } from '@/Scene/GameOverScene';
 import { RenderingScene } from '@/Scene/RenderingScene';
 
 export class BoardCheckScene extends Scene<Context> {
-  public handle(): SceneConstructor<Context> {
+  public handle() {
     const board = this.context.board;
 
     // 全員が石を置けない場合はゲームオーバー

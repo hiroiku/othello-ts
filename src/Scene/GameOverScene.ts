@@ -3,7 +3,7 @@ import { Scene } from '@/Game/Scene';
 import { Player } from '@/Othello/Player';
 
 export class GameOverScene extends Scene<Context> {
-  public handle(): undefined {
+  public handle() {
     const players = this.context.players;
     const board = this.context.board;
     const othello = this.context.othello;
@@ -24,7 +24,5 @@ export class GameOverScene extends Scene<Context> {
     } else {
       console.log('引き分け');
     }
-
-    return;
   }
 }

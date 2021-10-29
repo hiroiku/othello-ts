@@ -1,9 +1,9 @@
 import { Context } from '@/main';
-import { Scene, SceneConstructor } from '@/Game/Scene';
+import { Scene } from '@/Game/Scene';
 import { BoardCheckScene } from '@/Scene/BoardCheckScene';
 
 export class PutScene extends Scene<Context> {
-  public handle(): SceneConstructor<Context> {
+  public handle() {
     const input = this.context.input;
     const board = this.context.board;
     const othello = this.context.othello;
