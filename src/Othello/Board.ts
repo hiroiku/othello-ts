@@ -5,8 +5,8 @@ import { Square } from '@/Othello/Square';
 export interface BoardOptions {
   xAxis: string[];
   yAxis: string[];
-  blank: string;
-  valid: string;
+  blank: Square;
+  valid: Square;
 }
 
 /**
@@ -23,8 +23,8 @@ export class Board {
   public constructor(options: BoardOptions) {
     this.xAxis = options.xAxis;
     this.yAxis = options.yAxis;
-    this.blankSquare = new Square(options.blank);
-    this.validSquare = new Square(options.valid);
+    this.blankSquare = options.blank;
+    this.validSquare = options.valid;
   }
 
   /**

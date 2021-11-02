@@ -2,6 +2,7 @@ import { Game } from '@/Game';
 import { Turn } from '@/Othello/Turn';
 import { Board } from '@/Othello/Board';
 import { Player } from '@/Othello/Player';
+import { Square } from '@/Othello/Square';
 import { RenderingScene } from '@/Scene/RenderingScene';
 
 export interface Context {
@@ -25,8 +26,8 @@ new Game(() => {
   const board = new Board({
     xAxis: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'],
     yAxis: ['1', '2', '3', '4', '5', '6', '7', '8'],
-    blank: '.',
-    valid: '_',
+    blank: new Square('.'),
+    valid: new Square('_'),
   });
 
   // Player 1
