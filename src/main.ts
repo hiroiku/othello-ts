@@ -1,5 +1,5 @@
 import { Game } from '@/Game';
-import { Othello } from '@/Othello';
+import { Turn } from '@/Othello/Turn';
 import { Board } from '@/Othello/Board';
 import { Player } from '@/Othello/Player';
 import { RenderingScene } from '@/Scene/RenderingScene';
@@ -7,7 +7,7 @@ import { RenderingScene } from '@/Scene/RenderingScene';
 export interface Context {
   players: Player[];
   board: Board;
-  othello: Othello;
+  turn: Turn;
   input: {
     x: number;
     y: number;
@@ -37,7 +37,7 @@ new Game(() => {
   board.setPiece(players[1], 4, 3);
   board.setPiece(players[1], 3, 4);
 
-  const othello = new Othello(players);
+  const turn = new Turn(players);
 
   const input = {
     x: 0,
@@ -47,7 +47,7 @@ new Game(() => {
   return {
     players,
     board,
-    othello,
+    turn,
     input,
   };
 }).run(RenderingScene);

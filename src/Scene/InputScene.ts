@@ -24,10 +24,10 @@ export class InputScene extends Scene<Context> {
   public handle() {
     const input = this.context.input;
     const board = this.context.board;
-    const othello = this.context.othello;
+    const turn = this.context.turn;
 
     // ターン数と手番のプレイヤー名を表示する
-    console.log(`${othello.turn + 1}: ${othello.currentPlayer} の番です。`);
+    console.log(`${turn.value + 1}: ${turn.currentPlayer} の番です。`);
 
     // 入力例を表示する
     const xAxis = board.xAxis;
@@ -56,8 +56,8 @@ export class InputScene extends Scene<Context> {
       }
 
       // 石を置けるかを確認する
-      if (!board.validateLocation(othello.currentPlayer, x, y)) {
-        console.log(`${ix}${iy} には ${othello.currentPlayer} を置くことができません。`);
+      if (!board.validateLocation(turn.currentPlayer, x, y)) {
+        console.log(`${ix}${iy} には ${turn.currentPlayer} を置くことができません。`);
         continue;
       }
 

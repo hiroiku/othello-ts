@@ -26,12 +26,12 @@ export class BoardCheckScene extends Scene<Context> {
     }
 
     // 置ける石がない場合はパスする
-    const othello = this.context.othello;
-    const validLocations = board.getValidLocations(othello.currentPlayer);
+    const turn = this.context.turn;
+    const validLocations = board.getValidLocations(turn.currentPlayer);
     if (!validLocations) {
       console.log('置ける石が無いのでパスします。');
       console.log('');
-      othello.next();
+      turn.next();
     }
 
     return RenderingScene;

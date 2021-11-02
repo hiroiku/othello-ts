@@ -9,8 +9,8 @@ export class RenderingScene extends Scene<Context> {
   public handle() {
     // 盤面のレンダリング
     const board = this.context.board;
-    const othello = this.context.othello;
-    const rows = board.render(othello.currentPlayer);
+    const turn = this.context.turn;
+    const rows = board.render(turn.currentPlayer);
     for (const row of rows) {
       console.log(row.join(' '));
     }
